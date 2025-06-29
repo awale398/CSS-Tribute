@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="selector-styles.css">
+    <title>CSS Selectors Mastery Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors Mastery Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside>
+            <h3>Sidebar Menu</h3>
+            <ul>
+                <li>Menu 1</li>
+                <li>Menu 2
+                    <ul>
+                        <li>submenu 1</li>
+                        <li>submenu 2</li>
+                    </ul>
+                </li>
+                <li>menu 3</li>
+            </ul>
+        </aside>
+
+        <main>
+            <section class="dashboard">
+                <div class="card">
+                    <h2>Card one</h2>
+                    <p>First dashboard item</p>
+                    <button>Accept</button>
+                    <button>Reject</button>
+                </div>
+
+                <div class="card">
+                    <h2>Card Two</h2>
+                    <p class="notification">You have 3 alerts</p>
+                    <button>View</button>
+                    <button>Dismiss</button>
+                </div>
+
+                <div class="card">
+                    <h2>Card Three</h2>
+                    <p>System update ready</p>
+                    <button>Install</button>
+                    <button>Later</button>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Setting Form</h2>
+                <form>
+                    <input type="text" placeholder="Enter your name"> <br> <br>
+
+                    <input type="checkbox" id="subscribe">
+                    <label for="subscribe">Subscribe to Newsletter</label> <br>
+
+                    <input type="checkbox" id="updates">
+                    <label for="updates">Receive updates</label>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>
+            <a href="#">About</a>
+            <a href="#" class="important-link">Privacy</a>
+            <a href="#">Terms</a>
+        </p>
+    </footer>
+</body>
+</html>
