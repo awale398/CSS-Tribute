@@ -1,0 +1,52 @@
+/* Root inheritable Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+
+h1, h2{
+    color: #00509e;
+}
+
+section{
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20x;
+}
+
+.override{
+    color: red;
+}
+
+ .use-inherit {
+      color: inherit;
+    }
+
+    .reset-initial {
+      color: initial;
+    }
+
+    .reset-unset {
+      color: unset;
+    }
+
+    button {
+      background-color: #00509e;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: inherit;
+    }
+
+    footer {
+      background-color: #ddd;
+      padding: 20px;
+      text-align: center;
+    }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Inheritance Playground</title>
+</head>
+<body>
+    <h1>CSS Inheritance Playground</h1>
+    <section>
+        <h2>Global Inherited Styles</h2>
+        <p>This paragraph inherits font family and color from <code>body</code></p>
+        <button>Inheriting Font size</button>
+    </section>
+
+    <section>
+        <h2>Overriding inherited Styles</h2>
+        <p class="override">This paragraph overrides inherited color with its own</p>
+    </section>
+
+     <section>
+    <h2>Forcing Inheritance with <code>inherit</code></h2>
+    <div style="color: green">
+      <p class="use-inherit">This paragraph forces color to match its parent using <code>inherit</code>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resetting to Browser Default with <code>initial</code></h2>
+    <div style="color: darkorange">
+      <p class="reset-initial">This paragraph resets color to browser default using <code>initial</code>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Using <code>unset</code> (Smart Reset)</h2>
+    <div style="color: darkcyan">
+      <p class="reset-unset">This paragraph uses <code>unset</code> which means it will either inherit or reset depending on the property.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>This is the footer. Let’s apply <code>initial</code> or <code>unset</code> here to practice resets.</p>
+  </footer>
+</body>
+</html>
