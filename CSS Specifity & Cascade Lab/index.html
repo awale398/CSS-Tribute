@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS Cascade & Specificity Master Project</title>
+</head>
+<body>
+    <h1>CSS Cascade & Specifity Master Project</h1>
+
+    <div class="container">
+        <div class="card">
+            <h2>Simple Card</h2>
+            <p>This is a basic card with a default styles</p>
+        </div>
+
+        <div class="card hightlight important">
+            <h2>Class Cascade</h2>
+            <p>This paragraph is inside a card with multiple classes(Class specifity)</p>
+        </div>
+
+        <div class="car" id="special-card">
+            <h2>ID specifity</h2>
+            <p>This one uses an ID selector, which is stronger than a class selectors</p>
+        </div>
+
+        <div class="card">
+            <h2>Inline Style</h2>
+            <p style="color: darkorange; font-weight: bold;">This text is syled inline, it overides most css rules</p>
+        </div>
+
+        <div class="card">
+            <h2>!Important Rule</h2>
+            <p>This paragraph is styled with <code>!important</code></p>
+        </div>
+
+        <section class="card cascade-demo">
+            <h2>Same Specifity , Different order</h2>
+            <p>This paragraph is styled by two rules with equal specifity. The later one wins</p>
+        </section>
+
+        <section class="card cascade-demo" data-note>
+            <h2>Hover Cascade with Athribute</h2>
+            <p>Hover over this card. This paragraph is affected by a pseudo-class and athribute selector</p>
+        </section>
+    </div>
+</body>
+</html>

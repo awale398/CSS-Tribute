@@ -1,0 +1,72 @@
+/* GOLOBAL DEFAULTS */
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: darkblue;
+}
+
+/* CONTAINER */
+
+.card{
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.card h2{
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: #666;
+}
+
+/* SPECIFITY DEMO */
+/* Multiple classes + element */
+
+.card .highlight.important p{
+    color: darkred;
+    font-weight: bold;
+}
+
+/* ID selector */
+#special-card p{
+    color: green;
+}
+
+/* !important overrides everything */
+.card p.override{
+    color: purple !important;
+}
+
+/* later rule wins if specifity is equal */
+
+.cascade-demo p{
+    color: blue;
+}
+.cascade-demo p{
+    color: orange;
+}
+
+/* attribute + pseudo class + child combinator */
+    section.cascade-demo > div[data-note]:hover p {
+      background: #ffeecc;
+    }
