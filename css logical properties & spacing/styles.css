@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f2f2f2;
+    padding-block: 2rem; /* padding-top/bottom: 2rem */
+    padding-inline: 1rem; /* padding-left/right: 1rem */
+}
+
+header{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding-block: 1.5rem; /* padding-top/bottom: 1.5rem */
+    padding-inline: 1rem; /* padding-left/right: 1rem */
+}
+
+header h1{
+    margin-block-end: 0.5rem;  /* margin-bottom: 0.5rem */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-block: 2rem; /* margin-top/bottom: 2rem */
+    margin-inline: auto;  /* margin-left/right: auto */
+    max-inline-size: 1200px;  /* max-width: 1200px */
+}
+
+.card {
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding-block: 1rem; /* padding-top/bottom: 1rem */
+      padding-inline: 1.5rem; /* padding-left/right: 1.5rem */
+      inline-size: 100%; /* width: 100% */
+    }
+
+    .card h2 {
+      margin-block-end: 1rem; /* margin-bottom: 1rem */
+    }
+
+    .card p {
+      margin-block-end: 1.5rem; /* margin-bottom: 1.5rem */
+      line-height: 1.6;
+    }
+
+    .card .highlight {
+      background-color: #fef9c3;
+      padding-inline: 1rem; /* padding-left/right: 1rem */
+      padding-block: 0.5rem; /* padding-top/bottom: 0.5rem */
+      margin-block: 1rem; /* margin-top/bottom: 1rem */
+      border-inline-start: 4px solid #facc15; /* border-left: 4px solid */
+    }
+
+    .dual-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-block-start: 3rem; /* margin-top: 3rem */
+    }
+
+    .box {
+      inline-size: 250px; /* width: 250px */
+      block-size: 150px; /* height: 150px */
+      padding: 1rem;
+      background: #bae6fd;
+      border: 2px dashed #0ea5e9;
+      margin-inline-end: 1rem; /* margin-right: 1rem */
+      margin-block-end: 1rem; /* margin-bottom: 1rem */
+    }
+
+    footer {
+      text-align: center;
+      margin-block-start: 4rem; /* margin-top: 4rem */
+      padding-block: 2rem; /* padding-top/bottom: 2rem */
+      color: #555;
+    }
