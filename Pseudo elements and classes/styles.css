@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: #111827;
+    color: white;
+}
+
+header h1::before{
+    content: '🔥 ';
+}
+
+header h1::after{
+    content: '🔥 ';
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+nav li a{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #e5e7eb;
+    color: #111;
+    border-radius: 5px;
+}
+
+nav li a:hover{
+    background: #111827;
+    color: white;
+}
+
+nav li a:active{
+    transform: scale(0.98);
+}
+
+section.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: gold;
+    border-radius: 50%;
+}
+
+.card h2:hover::after{
+    content: " 🚀";
+}
+.card p::first-line{
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.card p::first-letter{
+    font-size: 2rem;
+    color: crimson;
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.card .highlight:has(h2:hover) {
+    background: #fef2fe;
+}
+
+.list-demo ul li::marker{
+    color: red;
+}
+
+.form input:focus{
+    outline: 2px solid blue;
+}
+
+.form input:invalid{
+    border-color: red;
+}
+
+.form input:valid{
+    border-color: green;
+}
+
+.form input::placeholder{
+    color: grey;
+    font-style: italic;
+}
+
+.form input::selection{
+    background: yellow;
+    color: black;
+}
