@@ -1,0 +1,130 @@
+/* Root Variables */
+:root {
+  --main-bg: #111;
+  --text-color: #fff;
+  --accent-color: #f39c12;
+  --font: 'Segoe UI', sans-serif;
+}
+
+/* Global reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--main-bg);
+    color: var(--text-color);
+    font-family: var(--font);
+}
+
+/* === Hero section === */
+.hero{
+    background: url('images/images/img.jpg'),
+                linear-gradient(to right #0f2027, #203a43, #2c5364);
+    background-blend-mode: overlay;            
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p{
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* === List section==== */
+.features{
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.features h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.custom-list{
+    list-style: none;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.custom-list li{
+    position: relative;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.custom-list li::before{
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.custom-list li:hover::before{
+    transform: scale(1.4);
+}
+
+/* gallery section with mix blend  */
+.gallery{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, mimmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery h2{
+    grid-column: 1 /-1;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.image{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: screen;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.image1{
+    background-image: url('images/images/img.jpg');
+}
+
+.image2{
+    background-image: url('images/images/img2.jpg');
+    mix-blend-mode: difference;
+}
+
+.image3{
+    background-image: url('images/images/img3.jpg');
+    mix-blend-mode: luminosity;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #aaa;
+}
