@@ -1,0 +1,154 @@
+:root {
+  --card-size: 300px;
+  --main-bg: #0f2027;
+  --main-gradient: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  --text-color: #fff;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoi UI', sans-serif;
+    background: var(--main-gradient);
+    color: var(--text-color);
+}
+
+header.hero{
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #111;
+    animation: slideIn 1.5s ease-out;
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: popText 1s  ease forwards;
+}
+
+.hero p{
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* ==== Gallery ==== */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-size), 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-card{
+    text-align: center;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    background: #222;
+    padding: 1rem;
+}
+
+.image-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.4s ease;
+}
+
+/* =====Animations ==== */
+/* 1. Fade in */
+
+.fade img{
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Zoom pulse */
+
+.zoom img{
+    animation: zoomPulse 1s ease-in-out infinite;
+}
+
+@keyframes zoomPulse{
+    0%, 100% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+
+/* Blur on hover */
+
+.blur img{
+    filter: blur(3px);
+    transition: filter 0.4s ease;
+}
+
+.blur:hover img{
+    filter: blur(0);
+}
+
+/* ==== GrayScale to color on hover====  */
+
+.grayscale img{
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+}
+
+.grayscale:hover img{
+    filter: grayscale(0%) contrast(110%) brightness(110%);
+}
+
+/* ==== Infinite Spin ===== */
+.rotate img{
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ==== Slide in header === */
+
+@keyframes slideIn{
+    from{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ====POPTEXT ==== */
+@keyframes popText{
+    0%{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    color: #bbb;
+}
