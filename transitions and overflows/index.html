@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Overflow and transition showcase</title>
+</head>
+<body>
+    <header class="header">
+        <h1>📚 Article Reader</h1>
+        <p>Mastering CSS transitions and overflows</p>
+    </header>
+
+    <section class="content-area">
+        <div class="scroll-box">
+            <h2>📰 Scrollable News Feed (overflow: auto)</h2>
+            <div class="news-feed">
+                <p>This is a scroll bar container.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <p>More content.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <p>Even more content.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <p>One more paragraph.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+
+            </div>
+        </div>
+
+        <div class="hidden-box">
+            <h2>🚫 Hidden Overflow (overflow: hidden)</h2>
+            <div class="hidden-content">
+                <p>This text overflows the container, but you can scroll to see it</p>
+            </div>
+        </div>
+
+        <div class="text-expand">
+            <h2>🔽 Expandable Text with Transition</h2>
+            <div class="text-box collapsed">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel turpis eu eros accumsan sollicitudin. Curabitur sed diam nec ligula vehicula convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+            </div>
+            <button class="toggle-btn">Read More</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CSS master class</p>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('.toggle-btn');
+        const box = document.querySelector('.text-box');
+
+        btn.addEventListener('click', () => {
+            box.classList.toggle('collapsed');
+            btn.textContent = box.classList.contains('collapsed') ? 'Read more' : 'Read less';
+        });
+    </script>
+</body>
+</html>
