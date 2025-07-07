@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS Focus and Z-index Project</title>
+</head>
+<body>
+    <header class="header" tabindex="0">Header(Focusable)</header>
+
+    <main class="main">
+        <section class="layer layer-one" tabindex="0">
+            Layer one (Z-index: 1)
+            <div class="nested layer-two" tabindex="0">
+                Layer two (z-index: 10)
+                <div class="nested layer-three" tabindex="0">
+                    Layer three (z-index: 999) with transform stacking context
+                </div>
+            </div>
+        </section>
+
+        <button class="popup-toggle">Toggle Popup</button>
+        <div class="popup" tabindex="0">I am a popup (Z-index: 1000)</div>
+
+        <form action="/api" class="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Focus me">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="And me too">
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer class="footer" tabindex="0">Footer (Focusable)</footer>
+
+    <script>
+        const popup =document.querySelector('.popup');
+        const toggle = document.querySelector('.popup-toggle');
+
+        toggle.addEventListener('click', () =>{
+        popup.classList.toggle('show');
+    });
+    </script>
+</body>
+</html>
